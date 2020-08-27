@@ -13,7 +13,7 @@ public class HelloWord {
     @RequestMapping("/SayHello")
     @ResponseBody
     public String sayHello(){
-        return "Hello，7月";
+        return "Hello，*7月";
     }
     /*
     todo：注释的区别
@@ -23,11 +23,11 @@ public class HelloWord {
      */
     @RequestMapping("/sayHello")
     public String SayHello(){
-        return "Hello，7月";
+        return "Hello，7月*";
     }
 
-    @RequestMapping("/sayello")
+    @RequestMapping("/sayhello")
     public void SayHello(HttpServletResponse response) throws IOException {
-        response.getWriter().write("Hello,7月");
+        response.getWriter().write("Hello,7月44");
     }
 }
