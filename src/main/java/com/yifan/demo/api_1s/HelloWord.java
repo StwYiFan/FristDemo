@@ -1,6 +1,7 @@
 package com.yifan.demo.api_1s;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,10 +11,11 @@ import java.io.IOException;
 @RestController
 public class HelloWord {
 
-    @RequestMapping("/SayHello")
+    @RequestMapping(value = "/SayHello",method = {RequestMethod.GET})
     @ResponseBody
     public String sayHello(){
-        return "Hello，*7月";
+        String x = "Hello，7月";
+        return x;
     }
     /*
     todo：注释的区别
